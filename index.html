@@ -1,141 +1,143 @@
 <!DOCTYPE html>
 <!--
-  Brew & Bloom Café — Events Page (events.html)
+  Brew & Bloom Café — Home Page (index.html)
   Author:       ITEC 236 Final Project
   Date Created: 2025-04-01
   Date Tested:  2025-04-10
-  Description:  Upcoming events, schedule table, and embedded video.
+  Description:  Home page for Brew & Bloom Café website.
+                Includes hero section, featured items, and intro text.
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Upcoming events at Brew & Bloom Café including live music, open mics, and coffee tastings." />
+  <meta name="description" content="Brew & Bloom Café – A cozy local coffee shop in Carbondale, IL." />
   <meta name="author" content="ITEC 236 Student" />
-  <title>Events | Brew &amp; Bloom Café</title>
+  <meta name="keywords" content="coffee, cafe, Carbondale, espresso, pastries" />
+  <title>Home | Brew &amp; Bloom Café</title>
+
+  <!-- Embedded Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- SlickNav CSS (CDN) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
+
+  <!-- Site Stylesheets -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" media="print" href="css/print.css" />
 </head>
 <body class="page-wrapper">
 
+  <!-- ===== HEADER ===== -->
   <header>
     <h1>☕ Brew &amp; Bloom Café</h1>
     <p class="tagline">Where every cup tells a story.</p>
   </header>
 
+  <!-- ===== NAVIGATION ===== -->
   <nav class="main-nav" aria-label="Main Navigation">
     <ul>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="menu.html">Menu</a></li>
       <li><a href="about.html">About Us</a></li>
-      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="events.html">Events</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Crafted with Care. Served with Love.</h2>
+      <p>Visit Brew &amp; Bloom Café in downtown Carbondale for handcrafted espresso drinks, fresh pastries, and a warm, welcoming atmosphere.</p>
+      <a href="menu.html" class="btn">Explore Our Menu</a>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
   <main>
-    <h2 class="section-title">Upcoming Events</h2>
-    <p>We love bringing our community together! Check out what's coming up at Brew &amp; Bloom. All events are free unless otherwise noted.</p>
 
-    <!-- Events Table -->
-    <h3 style="margin-top:30px; margin-bottom:10px;">April &amp; May 2025 Schedule</h3>
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Event</th>
-          <th>Time</th>
-          <th>Admission</th>
-          <th>Details</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>April 5, 2025</td>
-          <td>Acoustic Open Mic Night</td>
-          <td>7:00 PM – 9:30 PM</td>
-          <td>Free</td>
-          <td>Sign up at the counter. All skill levels welcome.</td>
-        </tr>
-        <tr>
-          <td>April 12, 2025</td>
-          <td>Single-Origin Coffee Tasting</td>
-          <td>2:00 PM – 4:00 PM</td>
-          <td>$10/person</td>
-          <td>Guided tasting of 4 single-origin beans with a barista.</td>
-        </tr>
-        <tr>
-          <td>April 19, 2025</td>
-          <td>Earth Day Art Show</td>
-          <td>11:00 AM – 5:00 PM</td>
-          <td>Free</td>
-          <td>Local artists showcase nature-themed work. Art for sale.</td>
-        </tr>
-        <tr>
-          <td>April 26, 2025</td>
-          <td>Latte Art Workshop</td>
-          <td>1:00 PM – 3:00 PM</td>
-          <td>$15/person</td>
-          <td>Learn rosettes and hearts from our head barista.</td>
-        </tr>
-        <tr>
-          <td>May 3, 2025</td>
-          <td>Jazz Afternoon</td>
-          <td>3:00 PM – 6:00 PM</td>
-          <td>Free</td>
-          <td>Featuring the Southern Jazz Trio. Outdoor patio seating.</td>
-        </tr>
-        <tr>
-          <td>May 10, 2025</td>
-          <td>SIU Finals Survival Night</td>
-          <td>8:00 PM – Midnight</td>
-          <td>Free</td>
-          <td>Extended hours, free drip coffee refills for SIU students.</td>
-        </tr>
-        <tr>
-          <td>May 17, 2025</td>
-          <td>Seasonal Menu Launch Party</td>
-          <td>5:00 PM – 8:00 PM</td>
-          <td>Free</td>
-          <td>Sample our new summer drinks — cold brew, spritzers, and more!</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- Video Section -->
-    <section class="media-section" style="margin-top:44px;">
-      <h2 class="section-title">Highlights from Our Last Open Mic</h2>
-      <p>Missed our March acoustic night? Catch the highlights below. It was an incredible evening of original songs and community spirit.</p>
-      <video controls poster="images/video-thumb.jpg">
-        <source src="media/open-mic-highlights.mp4" type="video/mp4" />
-        Your browser does not support the video element.
-      </video>
+    <!-- Welcome Section -->
+    <section style="margin-bottom:40px;">
+      <h2 class="section-title">Welcome to Brew &amp; Bloom</h2>
+      <p>We are a small-batch, artisan coffee café located in the heart of Carbondale, Illinois. Since 2018, we have been passionate about sourcing ethically traded beans from family-owned farms around the world. Every espresso shot is pulled to perfection, every pastry baked fresh each morning.</p>
+      <p style="margin-top:12px;">Whether you are a Southern Illinois University student looking for a quiet study spot, or a local just craving a great latte, Brew &amp; Bloom is your home away from home.</p>
     </section>
 
-    <!-- How to Stay Updated List -->
-    <section style="margin-top:40px;">
-      <h2 class="section-title">Stay in the Loop</h2>
-      <p>Never miss an event! Here's how to stay connected:</p>
-      <ol style="margin-top:14px; padding-left:24px; line-height:2.2;">
-        <li>Follow us on Instagram: <strong>@brewandbloomcafe</strong></li>
-        <li>Sign up for our monthly newsletter at the counter or via the contact form</li>
-        <li>Check this page — we update it every two weeks</li>
-        <li>Ask your barista about spontaneous pop-up events!</li>
-      </ol>
+    <!-- Featured Items (Unordered List) -->
+    <section style="margin-bottom:40px;">
+      <h2 class="section-title">Why Guests Love Us</h2>
+      <ul class="styled-list">
+        <li>Single-origin, fair-trade coffee beans roasted locally</li>
+        <li>House-made syrups — lavender, vanilla bean, cardamom, and more</li>
+        <li>Freshly baked pastries and vegan-friendly options every day</li>
+        <li>Free high-speed Wi-Fi and cozy study nooks</li>
+        <li>Dog-friendly patio seating open spring through fall</li>
+        <li>Monthly live acoustic music events — free admission</li>
+      </ul>
+    </section>
+
+    <!-- Featured Drinks Cards -->
+    <section>
+      <h2 class="section-title">Fan Favorites</h2>
+      <div class="card-row">
+
+        <div class="card">
+          <img src="latte.jpg" alt="Signature Lavender Latte" />
+          <div class="card-body">
+            <h3>Lavender Honey Latte</h3>
+            <p>Espresso, steamed oat milk, house lavender syrup, and a drizzle of local honey.</p>
+            <p class="card-price">$5.50</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="cold-brew.jpg" alt="Cold Brew" />
+          <div class="card-body">
+            <h3>Dark Roast Cold Brew</h3>
+            <p>Steeped 20 hours in cold water for a smooth, bold flavor with zero bitterness.</p>
+            <p class="card-price">$4.75</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="pastry.jpg" alt="Blueberry Scone" />
+          <div class="card-body">
+            <h3>Wild Blueberry Scone</h3>
+            <p>Baked fresh each morning with real wild blueberries and a lemon glaze.</p>
+            <p class="card-price">$3.25</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Audio Section -->
+    <section class="media-section" style="margin-top:44px;">
+      <h2 class="section-title">Our Café Atmosphere</h2>
+      <p>Get a taste of the warm, relaxed vibe at Brew &amp; Bloom with our signature café playlist:</p>
+      <audio controls>
+        <source src="cafe-ambience.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
     </section>
 
   </main>
 
+  <!-- ===== FOOTER ===== -->
   <footer>
     <p>&copy; 2025 Brew &amp; Bloom Café | 123 Main Street, Carbondale, IL 62901</p>
     <p><a href="index.html">Home</a> | <a href="contact.html">Contact Us</a></p>
   </footer>
 
+  <!-- jQuery (CDN) -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- SlickNav JS (CDN) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+  <!-- Site JS -->
   <script src="js/main.js"></script>
+
 </body>
 </html>
