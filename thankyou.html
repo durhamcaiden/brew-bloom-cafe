@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+  Brew & Bloom Café — Thank You Page (thankyou.html)
+  Author:       ITEC 236 Final Project
+  Date Created: 2025-04-01
+  Date Tested:  2025-04-10
+  Description:  Confirmation page displayed after contact form submission.
+                Reads submitted data from URL query string and displays it.
+                Includes a link back to the home page per project requirements.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thank you for contacting Brew & Bloom Café." />
+  <meta name="author" content="ITEC 236 Student" />
+  <title>Thank You | Brew &amp; Bloom Café</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-wrapper">
+
+  <header>
+    <h1>☕ Brew &amp; Bloom Café</h1>
+    <p class="tagline">Where every cup tells a story.</p>
+  </header>
+
+  <nav class="main-nav" aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main style="text-align:center; padding-top:60px;">
+
+    <div style="max-width:560px; margin:0 auto; background:#fff; border:1px solid #D4B896; border-radius:8px; padding:40px 32px;">
+      <p style="font-size:3rem; margin-bottom:12px;">☕</p>
+      <h2 style="font-size:2rem; margin-bottom:16px;">Thank You!</h2>
+      <p style="color:#6B6B6B; margin-bottom:24px;">We've received your message and will be in touch within 24 hours. Here's a summary of what you submitted:</p>
+
+      <!-- Submitted data display (populated by JS from URL params) -->
+      <div id="submittedData" style="background:#FDF6EC; border:1px solid #D4B896; border-radius:6px; padding:18px; text-align:left; margin-bottom:28px; font-size:0.95rem; line-height:2;">
+        <!-- Populated by JavaScript below -->
+      </div>
+
+      <a href="index.html" class="btn">← Back to Home</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Brew &amp; Bloom Café | 123 Main Street, Carbondale, IL 62901</p>
+    <p><a href="index.html">Home</a> | <a href="contact.html">Contact Us</a></p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Read URL params and display submitted data -->
+  <script>
+    $(document).ready(function () {
+      var params = new URLSearchParams(window.location.search);
+      var firstName = params.get("firstName") || "—";
+      var lastName  = params.get("lastName")  || "—";
+      var email     = params.get("email")     || "—";
+      var comments  = params.get("comments")  || "—";
+
+      var html =
+        "<strong>First Name:</strong> " + $("<span>").text(firstName).html() + "<br />" +
+        "<strong>Last Name:</strong> "  + $("<span>").text(lastName).html()  + "<br />" +
+        "<strong>Email:</strong> "      + $("<span>").text(email).html()     + "<br />" +
+        "<strong>Message:</strong> "    + $("<span>").text(comments).html();
+
+      $("#submittedData").html(html);
+    });
+  </script>
+
+</body>
+</html>
