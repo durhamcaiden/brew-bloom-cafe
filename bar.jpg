@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--
+  Brew & Bloom Café — Menu Page (menu.html)
+  Author:       ITEC 236 Final Project
+  Date Created: 2025-04-01
+  Date Tested:  2025-04-10
+  Description:  Full menu with tabular pricing data and item descriptions.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Full menu for Brew & Bloom Café – coffee, tea, pastries, and more." />
+  <meta name="author" content="ITEC 236 Student" />
+  <title>Menu | Brew &amp; Bloom Café</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-wrapper">
+
+  <header>
+    <h1>☕ Brew &amp; Bloom Café</h1>
+    <p class="tagline">Where every cup tells a story.</p>
+  </header>
+
+  <nav class="main-nav" aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2 class="section-title">Our Full Menu</h2>
+    <p>All drinks are available hot, iced, or blended unless noted. Non-dairy milk substitutions available at no extra charge.</p>
+
+    <!-- ===== ESPRESSO TABLE ===== -->
+    <h3 style="margin-top:30px; margin-bottom:8px;">Espresso Drinks</h3>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Description</th>
+          <th>Small</th>
+          <th>Medium</th>
+          <th>Large</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Espresso</td>
+          <td>Single or double shot of our house blend</td>
+          <td>$2.75</td>
+          <td>$3.25</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Latte</td>
+          <td>Espresso with steamed milk and light foam</td>
+          <td>$4.25</td>
+          <td>$5.00</td>
+          <td>$5.75</td>
+        </tr>
+        <tr>
+          <td>Cappuccino</td>
+          <td>Equal parts espresso, steamed milk, and foam</td>
+          <td>$4.00</td>
+          <td>$4.75</td>
+          <td>$5.50</td>
+        </tr>
+        <tr>
+          <td>Lavender Honey Latte</td>
+          <td>Espresso, oat milk, lavender syrup, local honey</td>
+          <td>$5.00</td>
+          <td>$5.50</td>
+          <td>$6.25</td>
+        </tr>
+        <tr>
+          <td>Americano</td>
+          <td>Espresso shots with hot water</td>
+          <td>$3.25</td>
+          <td>$3.75</td>
+          <td>$4.25</td>
+        </tr>
+        <tr>
+          <td>Mocha</td>
+          <td>Espresso, chocolate sauce, steamed milk</td>
+          <td>$4.50</td>
+          <td>$5.25</td>
+          <td>$5.75</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ===== COLD BREW / DRIP TABLE ===== -->
+    <h3 style="margin-top:30px; margin-bottom:8px;">Cold Brew &amp; Drip Coffee</h3>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Description</th>
+          <th>Small</th>
+          <th>Large</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cold Brew</td>
+          <td>20-hour steeped dark roast, smooth finish</td>
+          <td>$4.25</td>
+          <td>$4.75</td>
+        </tr>
+        <tr>
+          <td>Nitro Cold Brew</td>
+          <td>Cold brew on tap, silky and nitrogen-infused</td>
+          <td>$4.75</td>
+          <td>$5.50</td>
+        </tr>
+        <tr>
+          <td>House Drip</td>
+          <td>Light or dark roast, freshly brewed hourly</td>
+          <td>$2.50</td>
+          <td>$3.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ===== FOOD TABLE ===== -->
+    <h3 style="margin-top:30px; margin-bottom:8px;">Food &amp; Pastries</h3>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Vegan?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Wild Blueberry Scone</td>
+          <td>Baked fresh, lemon glaze, wild blueberries</td>
+          <td>$3.25</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Almond Croissant</td>
+          <td>Flaky butter croissant with almond frangipane</td>
+          <td>$3.75</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Banana Oat Muffin</td>
+          <td>Gluten-free, sweetened with maple syrup</td>
+          <td>$3.50</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Avocado Toast</td>
+          <td>Sourdough, smashed avocado, chili flakes</td>
+          <td>$6.50</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Quiche of the Day</td>
+          <td>Rotating seasonal quiche, ask your barista</td>
+          <td>$5.75</td>
+          <td>No</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Brew &amp; Bloom Café | 123 Main Street, Carbondale, IL 62901</p>
+    <p><a href="index.html">Home</a> | <a href="contact.html">Contact Us</a></p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

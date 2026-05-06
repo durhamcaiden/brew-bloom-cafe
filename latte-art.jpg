@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+  Brew & Bloom Café — Contact Page (contact.html)
+  Author:       ITEC 236 Final Project
+  Date Created: 2025-04-01
+  Date Tested:  2025-04-10
+  Description:  Contact page with a form that submits first name, last name,
+                email, and comments via GET to thankyou.html. Data visible in URL.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Brew & Bloom Café – send us a message or find our location." />
+  <meta name="author" content="ITEC 236 Student" />
+  <title>Contact | Brew &amp; Bloom Café</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-wrapper">
+
+  <header>
+    <h1>☕ Brew &amp; Bloom Café</h1>
+    <p class="tagline">Where every cup tells a story.</p>
+  </header>
+
+  <nav class="main-nav" aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2 class="section-title">Get in Touch</h2>
+
+    <!-- Two-column: form + info -->
+    <div class="two-col">
+
+      <!-- Form Column -->
+      <div class="col-main">
+        <p>Have a question, feedback, or want to book us for a private event? Fill out the form below and we'll get back to you within 24 hours.</p>
+
+        <!-- Form submits via GET so data appears in URL; action goes to thankyou.html -->
+        <form id="contactForm" action="thankyou.html" method="get" style="margin-top:24px;">
+          <div class="contact-form">
+
+            <div class="form-group">
+              <label for="firstName">First Name <span style="color:#c0392b;">*</span></label>
+              <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last Name <span style="color:#c0392b;">*</span></label>
+              <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span style="color:#c0392b;">*</span></label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="comments">Comments / Message <span style="color:#c0392b;">*</span></label>
+              <textarea id="comments" name="comments" placeholder="Tell us how we can help..." required></textarea>
+            </div>
+
+            <div class="btn-row">
+              <input type="reset" value="Reset" class="btn-reset" />
+              <input type="submit" value="Send Message" class="btn-submit" />
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+      <!-- Info Sidebar -->
+      <div class="col-side">
+        <div style="background:#fff; border:1px solid #D4B896; border-radius:6px; padding:24px;">
+          <h3 style="font-size:1.2rem; margin-bottom:16px;">Visit Us</h3>
+          <p><strong>Address:</strong><br />123 Main Street<br />Carbondale, IL 62901</p>
+          <p style="margin-top:14px;"><strong>Phone:</strong><br />(618) 555-0192</p>
+          <p style="margin-top:14px;"><strong>Email:</strong><br />hello@brewandbloom.com</p>
+          <p style="margin-top:14px;"><strong>Hours:</strong></p>
+          <ul style="list-style:none; padding:0; line-height:2; font-size:0.93rem;">
+            <li>Mon – Fri: 7:00 AM – 8:00 PM</li>
+            <li>Saturday: 8:00 AM – 9:00 PM</li>
+            <li>Sunday: 9:00 AM – 6:00 PM</li>
+          </ul>
+          <p style="margin-top:14px;"><strong>Social:</strong><br />
+            Instagram: @brewandbloomcafe<br />
+            Facebook: /brewandbloomcafe
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Brew &amp; Bloom Café | 123 Main Street, Carbondale, IL 62901</p>
+    <p><a href="index.html">Home</a> | <a href="contact.html">Contact Us</a></p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+  Brew & Bloom Café — Home Page (index.html)
+  Author:       ITEC 236 Final Project
+  Date Created: 2025-04-01
+  Date Tested:  2025-04-10
+  Description:  Home page for Brew & Bloom Café website.
+                Includes hero section, featured items, and intro text.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Brew & Bloom Café – A cozy local coffee shop in Carbondale, IL." />
+  <meta name="author" content="ITEC 236 Student" />
+  <meta name="keywords" content="coffee, cafe, Carbondale, espresso, pastries" />
+  <title>Home | Brew &amp; Bloom Café</title>
+
+  <!-- Embedded Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- SlickNav CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
+
+  <!-- Site Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" media="print" href="css/print.css" />
+</head>
+<body class="page-wrapper">
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>☕ Brew &amp; Bloom Café</h1>
+    <p class="tagline">Where every cup tells a story.</p>
+  </header>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="main-nav" aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Crafted with Care. Served with Love.</h2>
+      <p>Visit Brew &amp; Bloom Café in downtown Carbondale for handcrafted espresso drinks, fresh pastries, and a warm, welcoming atmosphere.</p>
+      <a href="menu.html" class="btn">Explore Our Menu</a>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- Welcome Section -->
+    <section style="margin-bottom:40px;">
+      <h2 class="section-title">Welcome to Brew &amp; Bloom</h2>
+      <p>We are a small-batch, artisan coffee café located in the heart of Carbondale, Illinois. Since 2018, we have been passionate about sourcing ethically traded beans from family-owned farms around the world. Every espresso shot is pulled to perfection, every pastry baked fresh each morning.</p>
+      <p style="margin-top:12px;">Whether you are a Southern Illinois University student looking for a quiet study spot, or a local just craving a great latte, Brew &amp; Bloom is your home away from home.</p>
+    </section>
+
+    <!-- Featured Items (Unordered List) -->
+    <section style="margin-bottom:40px;">
+      <h2 class="section-title">Why Guests Love Us</h2>
+      <ul class="styled-list">
+        <li>Single-origin, fair-trade coffee beans roasted locally</li>
+        <li>House-made syrups — lavender, vanilla bean, cardamom, and more</li>
+        <li>Freshly baked pastries and vegan-friendly options every day</li>
+        <li>Free high-speed Wi-Fi and cozy study nooks</li>
+        <li>Dog-friendly patio seating open spring through fall</li>
+        <li>Monthly live acoustic music events — free admission</li>
+      </ul>
+    </section>
+
+    <!-- Featured Drinks Cards -->
+    <section>
+      <h2 class="section-title">Fan Favorites</h2>
+      <div class="card-row">
+
+        <div class="card">
+          <img src="images/latte.jpg" alt="Signature Lavender Latte" />
+          <div class="card-body">
+            <h3>Lavender Honey Latte</h3>
+            <p>Espresso, steamed oat milk, house lavender syrup, and a drizzle of local honey.</p>
+            <p class="card-price">$5.50</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/cold-brew.jpg" alt="Cold Brew" />
+          <div class="card-body">
+            <h3>Dark Roast Cold Brew</h3>
+            <p>Steeped 20 hours in cold water for a smooth, bold flavor with zero bitterness.</p>
+            <p class="card-price">$4.75</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/pastry.jpg" alt="Blueberry Scone" />
+          <div class="card-body">
+            <h3>Wild Blueberry Scone</h3>
+            <p>Baked fresh each morning with real wild blueberries and a lemon glaze.</p>
+            <p class="card-price">$3.25</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Audio Section -->
+    <section class="media-section" style="margin-top:44px;">
+      <h2 class="section-title">Our Café Atmosphere</h2>
+      <p>Get a taste of the warm, relaxed vibe at Brew &amp; Bloom with our signature café playlist:</p>
+      <audio controls>
+        <source src="media/cafe-ambience.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Brew &amp; Bloom Café | 123 Main Street, Carbondale, IL 62901</p>
+    <p><a href="index.html">Home</a> | <a href="contact.html">Contact Us</a></p>
+  </footer>
+
+  <!-- jQuery (CDN) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- SlickNav JS (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+  <!-- Site JS -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
