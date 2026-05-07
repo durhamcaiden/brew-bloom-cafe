@@ -1,44 +1,85 @@
-/* =============================================
-   Brew & Bloom Café - Print Stylesheet
-   Author: ITEC 236 Final Project
-   Date Created: 2025-04-01
-   Date Tested:  2025-04-10
-   Description:  Print-friendly styles for home page
-   ============================================= */
+<!DOCTYPE html>
+<!--
+  Brew & Bloom Café — Events Page (events.html)
+  Author:       ITEC 236 Final Project
+  Date Created: 2025-04-01
+  Date Tested:  2025-04-10
+  Description:  Upcoming events, schedule table, and embedded video.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Upcoming events at Brew & Bloom Café including live music, open mics, and coffee tastings." />
+  <meta name="author" content="ITEC 236 Student" />
+  <title>Events | Brew &amp; Bloom Café</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-wrapper">
 
-@media print {
-  /* Hide nav, hero background, footer links, buttons */
-  nav.main-nav,
-  .hero,
-  .btn,
-  footer a,
-  audio, video { display: none !important; }
+  <header>
+    <h1>☕ Brew &amp; Bloom Café</h1>
+    <p class="tagline">Where every cup tells a story.</p>
+  </header>
 
-  body {
-    font-family: Georgia, serif;
-    font-size: 12pt;
-    color: #000;
-    background: #fff;
-  }
+  <nav class="main-nav" aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  header {
-    background: none !important;
-    color: #000 !important;
-    border-bottom: 2pt solid #000;
-    padding: 10pt 0;
-  }
+  <main>
+    <h2 class="section-title">Upcoming Events</h2>
+    <p>We love bringing our community together! Check out what's coming up at Brew &amp; Bloom. All events are free unless otherwise noted.</p>
 
-  header h1 { color: #000 !important; font-size: 22pt; }
+    <h3 style="margin-top:30px; margin-bottom:10px;">April &amp; May 2025 Schedule</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Date</th><th>Event</th><th>Time</th><th>Admission</th><th>Details</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>April 5, 2025</td><td>Acoustic Open Mic Night</td><td>7:00 PM – 9:30 PM</td><td>Free</td><td>Sign up at the counter. All skill levels welcome.</td></tr>
+        <tr><td>April 12, 2025</td><td>Single-Origin Coffee Tasting</td><td>2:00 PM – 4:00 PM</td><td>$10/person</td><td>Guided tasting of 4 single-origin beans with a barista.</td></tr>
+        <tr><td>April 19, 2025</td><td>Earth Day Art Show</td><td>11:00 AM – 5:00 PM</td><td>Free</td><td>Local artists showcase nature-themed work. Art for sale.</td></tr>
+        <tr><td>April 26, 2025</td><td>Latte Art Workshop</td><td>1:00 PM – 3:00 PM</td><td>$15/person</td><td>Learn rosettes and hearts from our head barista.</td></tr>
+        <tr><td>May 3, 2025</td><td>Jazz Afternoon</td><td>3:00 PM – 6:00 PM</td><td>Free</td><td>Featuring the Southern Jazz Trio. Outdoor patio seating.</td></tr>
+      </tbody>
+    </table>
 
-  main { max-width: 100%; padding: 0; }
+    <section class="media-section" style="margin-top:44px;">
+      <h2 class="section-title">Highlights from Our Last Open Mic</h2>
+      <p>Missed our March acoustic night? Catch the highlights below.</p>
+      <video controls poster="video-thumb.jpg">
+        <source src="open-mic-highlights.mp4" type="video/mp4" />
+        Your browser does not support the video element.
+      </video>
+    </section>
 
-  h2, h3 { color: #000 !important; page-break-after: avoid; }
+    <section style="margin-top:40px;">
+      <h2 class="section-title">Stay in the Loop</h2>
+      <ol style="margin-top:14px; padding-left:24px; line-height:2.2;">
+        <li>Follow us on Instagram: <strong>@brewandbloomcafe</strong></li>
+        <li>Sign up for our monthly newsletter at the counter or via the contact form</li>
+        <li>Check this page — we update it every two weeks</li>
+      </ol>
+    </section>
+  </main>
 
-  .card-row { display: block; }
-  .card { border: 1pt solid #ccc; margin-bottom: 12pt; page-break-inside: avoid; }
-  .card img { display: none; }
+  <footer>
+    <p>&copy; 2025 Brew &amp; Bloom Café | 123 Main Street, Carbondale, IL 62901</p>
+    <p><a href="index.html">Home</a> | <a href="contact.html">Contact Us</a></p>
+  </footer>
 
-  a::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
-
-  footer { border-top: 1pt solid #000; color: #000; font-size: 9pt; }
-}
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
