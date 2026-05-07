@@ -1,8 +1,8 @@
 /* =============================================
    Brew & Bloom Café - Main Stylesheet
-   Author: ITEC 236 Final Project
-   Date Created: 2025-04-01
-   Date Tested:  2025-04-10
+   ITEC 236 Final Project
+   Date Created: 2026-04-01
+   Date Tested:  2026-04-10
    Description:  Main stylesheet for all pages
    ============================================= */
 
